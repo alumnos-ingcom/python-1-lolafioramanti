@@ -36,10 +36,16 @@ def valor_absoluto(dividendo, divisor):
 def division_lenta(dividendo, divisor, signo):
     ''' Función que realiza una resta sucesiva hasta obtener el cociente y resto de dos números. También se multiplica el cociente por el signo original de los valores si es necesario. '''
     cociente = 0
-    while dividendo >= divisor:
-        resto = dividendo - divisor
-        cociente += 1
-        dividendo = resto
+    if divisor != 0:
+        if dividendo >= divisor:
+            while (dividendo - divisor) >= 0:
+                resto = dividendo - divisor
+                cociente += 1
+                dividendo = resto
+        else:
+            resto = dividendo * signo
+    else:
+        print("No es posible realizar el cálculo con divisor 0.")
     cociente *= signo
     return cociente, resto   
 def principal():
