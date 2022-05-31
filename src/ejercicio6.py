@@ -34,6 +34,7 @@ def ordenar_mayor_a_menor(uno, dos, tres):
         valorMm = [tres, uno, dos]
     elif tres > dos and dos > uno :
         valorMm = [tres, dos, uno]
+    valorMm = tuple(valorMm)
     return valorMm
 def ordenar_menor_a_mayor(uno, dos, tres):
     ''' Esta función ordena los números de menor a mayor y los guarda en una lista. '''
@@ -49,6 +50,7 @@ def ordenar_menor_a_mayor(uno, dos, tres):
         valormM = [tres, uno, dos]
     elif tres < dos and dos < uno :
         valormM = [tres, dos, uno]
+    valormM = tuple(valormM)
     return valormM
 def principal():
     """
@@ -59,8 +61,8 @@ def principal():
     tres = int(input("Ingrese un número: "))
     m_a_M = ordenar_menor_a_mayor(uno, dos, tres)
     M_a_m = ordenar_mayor_a_menor(uno, dos, tres)
-    print(' < '.join(map(str, m_a_M)))
-    print(' > '.join(map(str, M_a_m)))
+    print(f"{m_a_M}")
+    print(f"{M_a_m}")
 
 if __name__ == "__main__":
     principal()
