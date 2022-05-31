@@ -25,10 +25,10 @@ def principal():
     """
     Conversión de grados centígrados a fahrenheit, y viceversa.
     """
-    centigrados = int(input("Ingrese los grados centígrados a convertir: "))
+    centigrados = float(input("Ingrese los grados centígrados a convertir: "))
     conversion1 = convertir_a_fahrenheit(centigrados)
     print(f"{conversion1}ºF")
-    fahrenheit = int(input("Ingrese el grado fahrenheit a convertir: "))
+    fahrenheit = float(input("Ingrese el grado fahrenheit a convertir: "))
     conversion2 = convertir_a_centigrados(fahrenheit)
     print(f"{conversion2}ºC")
 
