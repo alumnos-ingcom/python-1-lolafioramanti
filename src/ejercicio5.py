@@ -5,7 +5,7 @@
 
 """
 Escribir una función que mediante restas sucesivas, obtenga el valor del cociente y resto de dos números enteros.
-PRECONDICIONES: Los valores de entrada deben ser dos números enteros, siendo el primero mayor o igual al segundo.
+PRECONDICIONES: Los valores de entrada deben ser dos números enteros.
 POSTCONDIONES: El valor de salida deben un mensaje con dos números, siendo que la cuenta fue exitosa.
 """
 
