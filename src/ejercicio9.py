@@ -15,6 +15,8 @@ def factores_primos(numero):
     factores = []
     if numero == 0:
         factores.append("ninguno")
+    elif numero < 0:
+        factores.append("indefinido, este programa funciona sólo con números positivos")
     else:
         while numero > 1:
             if numero % divisor != 0:
