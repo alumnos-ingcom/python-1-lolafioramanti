@@ -11,20 +11,23 @@ POSTCONDICIONES: El valor de salida debe ser del tipo booleano.
 
 def es_multiplo(numero, multiplo):
     '''Esta función se encarga de hacer una resta sucesiva para corroborar si un número es múltiplo de otro.'''
-    if numero < 0:
-        numero *= -1
-    if multiplo < 0:
-        multiplo *= -1
-    if numero < multiplo:
+    if multiplo == 0:
         valor = False
     else:
-        while numero >= multiplo:
-            numero -= multiplo
-            resto = numero
-            if resto == 0:
-                valor = True
-            else:
-                valor = False
+        if numero < 0:
+            numero *= -1
+        if multiplo < 0:
+            multiplo *= -1
+        if numero < multiplo:
+            valor = False
+        else:
+            while numero >= multiplo:
+                numero -= multiplo
+                resto = numero
+                if resto == 0:
+                    valor = True
+                else:
+                    valor = False
     return valor
     
 def principal():
