@@ -15,13 +15,15 @@ def sexadecimal_a_decimal(horas, minutos, segundos):
     horas *= 3600
     minutos *= 60
     a_segundos = horas + minutos + segundos
-    return a_segundos
+    lista = [a_segundos]
+    return tuple(lista)
 def decimal_a_sexadecimal(numero):
     '''Esta función convierte segundos a horas, minutos y segundos.'''
     segundo = numero % 60
     minuto = (numero // 60) % 60
     hora = (numero // 60) // 60
-    return hora, minuto, segundo
+    lista = [hora, minuto, segundo]
+    return tuple(lista)
 
 def principal():
     '''Esta función interactúa con el usuario. En ella se solicitan los valores a convertir, y se muestran los resultados. Para lograrlo se encarga de utilizar la entrada, funciones y salida del algoritmo.'''
@@ -31,13 +33,13 @@ def principal():
         if minutos >= 0 and minutos < 60:
             segundos = int(input("Ingrese los segundos: "))
             if segundos >= 0 and segundos < 60:
-                conversion1 = sexadecimal_a_decimal(horas, minutos, segundos)
-                print(f"{horas}:{minutos}:{segundos} equivale a {conversion1} segundos") 
+                sexa_deci = sexadecimal_a_decimal(horas, minutos, segundos)
+                print(f"{horas}:{minutos}:{segundos} equivale a {sexa_deci} segundos") 
                 print()
                 numero = int(input("Ingrese los segundos a convertir en hs, min y s: "))
                 if numero >= 0:
-                    hora, minuto, segundo = decimal_a_sexadecimal(numero)
-                    print(f"{numero} equivale a {hora}hs {minuto}min {segundo}s")
+                    deci_sexa = decimal_a_sexadecimal(numero)
+                    print(f"{numero} equivale a {deci_sexa}")
                 else:
                     print("Error, los segundos no pueden ser números negativos.")
             else:
