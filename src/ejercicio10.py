@@ -12,7 +12,9 @@ POSTCONDICIÓN: El valor de salida debe ser "True" o "False".
 
 def es_palindromo(texto):
     '''Función que evalúa si una frase es palíndromo.'''
-    if texto == texto[::-1]:
+    sin_espacios = texto.replace(" " ,"")
+    sin_mayus = sin_espacios.lower()
+    if sin_mayus == sin_mayus[::-1]:
         valor = True
     else:
         valor = False
