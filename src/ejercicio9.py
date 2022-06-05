@@ -13,14 +13,9 @@ def factores_primos(numero):
     '''Esta función se encarga de encontrar los factores primos de un número.'''
     divisor = 2
     factores = []
-    if numero == 0:
-        factores.append("ninguno")
-    elif numero < 0:
-        factores.append("indefinido, este programa funciona sólo con números positivos")
-    else:
-        while numero > 1:
-            if numero % divisor != 0:
-                divisor += 1
+    while numero > 1:
+        if numero % divisor != 0:
+            divisor += 1
         else:
             numero = numero // divisor
             factores.append(divisor)
@@ -36,4 +31,3 @@ def principal():
 
 if __name__ == "__main__":
     principal()
-    
