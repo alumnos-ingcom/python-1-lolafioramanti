@@ -14,11 +14,11 @@ def signo(numero):
         suma = numero + abs(numero)
         resta = numero - abs(numero)
         if resta == 0:
-            resultado = "positivo"
+            resultado = 1
         else:
-            resultado = "negativo"
+            resultado = -1
     else:
-        resultado = "neutro"
+        resultado = 0
     return resultado
 
 def principal():
