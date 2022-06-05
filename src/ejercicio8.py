@@ -11,14 +11,15 @@ POSTCONDICIÓN: El valor de salida debe ser "True" o "False".
 def es_primo(num):
     ''' Esta función calcula si el número ingresado es primo o no. Devuelve True o False.'''
     if num < 2:
-        return False
+        valor = False
     divisor = 2
     while divisor > 1 and divisor < num:
         if num % divisor == 0:
-            return False
+            valor = False
         else:
             divisor += 1
-    return True
+    valor = True
+    return valor
     
 def principal():
     '''Esta función interactúa con el usuario. Se encarga de obtener la entrada, llamar a la función e imprimir el resultado de la misma.'''
